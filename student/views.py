@@ -6,8 +6,8 @@ from student.models import Students, Rating
 
 def home(request):
     student = Students.objects.all()
-    student_fst = Students.objects.get(id=1) # select * from Student where id=1
-    student_flt = Students.objects.filter(name="Aikumush")
+    # student_fst = Students.objects.get(id=1) # select * from Student where id=1
+    # student_flt = Students.objects.filter(name="Aikumush")
     return render(request, 'index.html' , {"student": student})
 
 def student_list(request):
